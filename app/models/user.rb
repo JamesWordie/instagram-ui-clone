@@ -7,4 +7,6 @@ class User < ApplicationRecord
   validates :following, presence: true
   validates :follower, presence: true
   validates :email, presence: true
+
+  has_one_attached :avatar
 end
