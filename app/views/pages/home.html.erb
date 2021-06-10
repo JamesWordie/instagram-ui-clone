@@ -9,10 +9,10 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4 my-5">
+    <div class="col-md-4 my-5 sticky-top">
       <div class="d-flex flex-column align-items-stretch">
         <div class="d-flex">
-          <div class="row w-100 align-items-center">
+          <div class="row w-100 align-items-center flex-fill">
             <div class="col-3 text-center">
               <%= cl_image_tag @james.avatar.key, width: 56, height: 56, crop: :thumb, gravity: :face, class:"avatar-large" %>
             </div>
@@ -22,18 +22,18 @@
                 <p class="text-muted mb-0" style="font-size:14px;"><%= @james.firstname %>  <%= @james.lastname %></p>
               </div>
             </div>
-            <div class="col-3">
-              <button type="button" class="btn btn-link" style="font-size:12px;">Switch</button>
+            <div class="col-3 pr-0 text-right">
+              <button type="button" class="btn btn-link pr-2" style="font-size:12px;">Switch</button>
             </div>
           </div>
         </div>
-        <div class="d-flex my-4">
-          <div class="row w-100 align-items-center">
+        <div class="d-flex my-4 justify-content-between">
+          <div class="row w-100 align-items-center flex-fill justify-content-between">
             <div class="col-9">
               <p class="text-muted mb-0" style="font-size:14px;">Suggestions For You</p>
             </div>
-            <div class="col-3">
-              <button type="button" class="btn btn-link text-dark" style="font-size:12px;">See All</button>
+            <div class="col-3 pr-2 text-right">
+              <button type="button" class="btn btn-link text-dark px-0" style="font-size:12px;">See All</button>
             </div>
           </div>
         </div>
@@ -57,6 +57,23 @@
           </div>
           <% end %>
         </div>
+        <nav class="d-flex flex-wrap mw-100 my-4">
+          <p class="text-muted" style="font-size:12px;">About - Help - Press - API - Jobs - Privacy - Terms - Locations - Top Accounts - Hashtags - Language</p>
+<!--           <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">About -</li>
+            <li class="list-group-item">Help -</li>
+            <li class="list-group-item">Press -</li>
+            <li class="list-group-item">API -</li>
+            <li class="list-group-item">Jobs -</li>
+            <li class="list-group-item">Privacy -</li>
+            <li class="list-group-item">Terms -</li>
+            <li class="list-group-item">Locations -</li>
+            <li class="list-group-item">Top Accounts -</li>
+            <li class="list-group-item">Hashtags -</li>
+            <li class="list-group-item">Language -</li>
+          </ul> -->
+        </nav>
+        <p class="text-muted text-uppercase" style="font-size:12px;"><i class="far fa-copyright"></i> 2021 Instagram From Facebook</p>
       </div>
     </div>
   </div>
