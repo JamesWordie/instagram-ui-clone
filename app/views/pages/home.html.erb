@@ -1,12 +1,61 @@
-<div class="container">
+<div class="container" style="max-width: 1000px !important">
   <div class="row">
     <div class="col-md-8">
+      <div class="d-flex">
+        <div class="d-flex justify-content-around">
+          <div class="d-flex flex-column">
 
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 my-5">
       <div class="d-flex flex-column align-items-stretch">
         <div class="d-flex">
-
+          <div class="row w-100 align-items-center">
+            <div class="col-3 text-center">
+              <%= cl_image_tag @james.avatar.key, width: 56, height: 56, crop: :thumb, gravity: :face, class:"avatar-large" %>
+            </div>
+            <div class="col-6 text-left">
+              <div class="">
+                <p class="mb-0" style="font-size:14px;"><%= @james.username %></p>
+                <p class="text-muted mb-0" style="font-size:14px;"><%= @james.firstname %>  <%= @james.lastname %></p>
+              </div>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-link" style="font-size:12px;">Switch</button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex my-4">
+          <div class="row w-100 align-items-center">
+            <div class="col-9">
+              <p class="text-muted mb-0" style="font-size:14px;">Suggestions For You</p>
+            </div>
+            <div class="col-3">
+              <button type="button" class="btn btn-link text-dark" style="font-size:12px;">See All</button>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <% 5.times do %>
+          <div class="row w-100 justify-content-between align-items-center my-2">
+            <div class="col-2 text-center">
+              <%= cl_image_tag @users.sample.avatar.key, width: 40, height: 40, crop: :thumb, gravity: :face, class:"avatar" %>
+            </div>
+            <div class="col-8 text-left">
+              <div class="">
+                <p class="mb-0" style="font-size:14px;"><%= @james.username %></p>
+                <p class="text-muted mb-0" style="font-size:12px; text-overflow: ellipsis;
+                                                  white-space: nowrap; display: block; overflow: hidden;">
+                                                  Followed by <%= @users.sample.username %> + <%= rand(1..10) %> more</p>
+              </div>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-link" style="font-size:14px;">Follow</button>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>

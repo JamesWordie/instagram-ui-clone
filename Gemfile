@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+# cloudinary gem for image store with active storage
+gem 'cloudinary', '~> 1.16.0'
 # faker gem added for seeds
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'

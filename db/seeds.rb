@@ -46,6 +46,7 @@ i = 0
   file = URI.open("#{avatar_images[i]}")
   user.avatar.attach(io: file, filename: 'person.jpg', content_type: 'image/jpg')
   i += 1
+  user.save!
 end
 
 
