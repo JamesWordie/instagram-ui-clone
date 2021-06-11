@@ -1,13 +1,44 @@
 <div class="container" style="max-width: 1000px !important">
   <div class="row">
     <div class="col-md-8">
-      <div class="d-flex">
-        <div class="d-flex justify-content-around">
-          <div class="d-flex flex-column">
+      <div class="d-flex flex-row my-4 bg-white rounded-lg" style="overflow-x: scroll;">
+        <% 20.times do %>
+          <div class="d-flex flex-column align-items-center px-2 my-3">
+            <% user = @users.sample %>
+            <%= cl_image_tag user.avatar.key, width: 56, height: 56, crop: :thumb, gravity: :face, class:"avatar-large text-center" %>
+            <p class="mb-0" style="font-size:12px;"><%= user.username %></p>
+          </div>
+        <% end %>
+      </div>
+      <%# 20.times do %>
+        <div class="d-flex flex-column bg-white">
+          <div class="d-flex w-100">
+            <div class="row align-items-center flex-fill p-2">
+              <div class="col-1 text-center">
+                <%= cl_image_tag @james.avatar.key, width: 40, height: 40, crop: :thumb, gravity: :face, class:"avatar" %>
+              </div>
+              <div class="col-9 text-left">
+                <div class="">
+                  <p class="mb-0" style="font-size:14px;"><%= @james.username %></p>
+                  <p class="text-muted mb-0" style="font-size:14px;"><%= @james.firstname %>  <%= @james.lastname %></p>
+                </div>
+              </div>
+              <div class="col-2 text-center">
+                <i class="fas fa-ellipsis-h"></i>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="https://source.unsplash.com/random/600x400" class="w-100" alt="">
+          </div>
+          <div>
+
+          </div>
+          <div>
 
           </div>
         </div>
-      </div>
+      <%# end %>
     </div>
     <div class="col-md-4 my-5 sticky-top">
       <div class="d-flex flex-column align-items-stretch">
@@ -59,19 +90,6 @@
         </div>
         <nav class="d-flex flex-wrap mw-100 my-4">
           <p class="text-muted" style="font-size:12px;">About - Help - Press - API - Jobs - Privacy - Terms - Locations - Top Accounts - Hashtags - Language</p>
-<!--           <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">About -</li>
-            <li class="list-group-item">Help -</li>
-            <li class="list-group-item">Press -</li>
-            <li class="list-group-item">API -</li>
-            <li class="list-group-item">Jobs -</li>
-            <li class="list-group-item">Privacy -</li>
-            <li class="list-group-item">Terms -</li>
-            <li class="list-group-item">Locations -</li>
-            <li class="list-group-item">Top Accounts -</li>
-            <li class="list-group-item">Hashtags -</li>
-            <li class="list-group-item">Language -</li>
-          </ul> -->
         </nav>
         <p class="text-muted text-uppercase" style="font-size:12px;"><i class="far fa-copyright"></i> 2021 Instagram From Facebook</p>
       </div>
